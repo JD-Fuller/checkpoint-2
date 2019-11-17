@@ -1,0 +1,52 @@
+body,html {
+  height: 100vh;
+}
+
+header {
+  background: rgb(255, 93, 96);
+  font-size: 30pt;
+  font-family: "Press Start 2P";
+  color: white;
+}
+.h1 {
+  font-size: 50pt;
+}
+.row {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Press Start 2P";
+}
+.col {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Press Start 2P";
+}
+h1 {
+  color: grey;
+  font-family: "Press Start 2P";
+  text-align: center;
+}
+
+.dataRight {
+  border: 3px solid rgba(158, 161, 163, 0.61);
+  margin: 2em;
+  padding: 1em 0 4em 0;
+  text-align: center;
+  box-shadow: -10px 10px rgb(255, 93, 96);
+  height: 100%;
+}
+
+.btn {
+  background: grey;
+  border-radius: 9%;
+  color: white;
+  cursor: pointer;
+  font-family: "Press Start 2P";
+  margin-top: 1em;
+}
+.crystal-icon {
+
+  source: https://gamepedia.cursecdn.com/pixark_gamepedia_en/3/30/Yellow_Magic_Crystal_Packet.png
+}

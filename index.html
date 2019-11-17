@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+    href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Architects+Daughter|Archivo+Black|Bangers|Fredoka+One|Gloria+Hallelujah|Knewave|Permanent+Marker|Press+Start+2P|Reenie+Beanie|Rock+Salt|Special+Elite&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Moon-Miner Checkpoint 2</title>
+</head>
+
+<body>
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>Crystal Wizard</h1>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <img src="http://pixelartmaker.com/art/b5da8523654c61c.png" alt="wizard image"></img>
+      </div>
+      <div class="col">
+        <img class="w-100"
+          src="http://pixelartmaker.com/art/ddd7d19f316d09f.png"
+          alt="dilithium crystals" onclick="mine()"></img>
+      </div>
+      <div class="col dataRight">
+        <h3>Crystal Hunt</h3>
+        <h4>Selections
+          <h5>Crystal Count: <span id="crystal-count">0</span></h5>
+          <button class="btn btn-success" id="getFairyBtn" onclick="buyFairy()">Buy Fairy</button>
+          <h5>Fairy Count: <span id="fairy-count">0</span></h5>
+          <button class="btn btn-success" id="getLeprMapBtn" onclick="buyLeprMap()">BUY Leprechaun Map</button>
+          <h5>Leprecaun Map: <span id="leprechaun-count">0</span></h5>
+          <button class="btn btn-success" id="getUnicornBtn" onclick="buyUnicorn()">Buy Unicorn</button>
+          <h5>Unicorn: <span id="unicorn-count">0</span></h5>
+          <button class="btn btn-success" id="hireDwarfTeamBtn" onclick="hireDwarfTeam()">BUY Dwarf Team</button>
+          <h5>Dwarf Team: <span id="dwarf-count">0</span></h5>
+        </h4>
+      </div>
+    </div>
+
+  </main>
+  <footer></footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
