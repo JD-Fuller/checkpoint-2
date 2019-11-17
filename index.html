@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Architects+Daughter|Archivo+Black|Bangers|Fredoka+One|Gloria+Hallelujah|Knewave|Permanent+Marker|Press+Start+2P|Reenie+Beanie|Rock+Salt|Special+Elite&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Moon-Miner Checkpoint 2</title>
+  <title>Wizard's Crystals</title>
 </head>
 
 <body>
@@ -25,9 +25,11 @@
   <main class="container-fluid">
     <div class="row">
       <div class="col">
+          
         <img src="http://pixelartmaker.com/art/b5da8523654c61c.png" alt="wizard image"></img>
       </div>
       <div class="col">
+          <button class="btn btn-success" id="start-button" type="button" style="margin: 3em;" onclick="startGame()">Start Quest</button>
         <img class="w-100"
           src="http://pixelartmaker.com/art/ddd7d19f316d09f.png"
           alt="dilithium crystals" onclick="mine()"></img>
@@ -36,14 +38,23 @@
         <h3>Crystal Hunt</h3>
         <h4>Selections
           <h5>Crystal Count: <span id="crystal-count">0</span></h5>
-          <button class="btn btn-success" id="getFairyBtn" onclick="buyFairy()">Buy Fairy</button>
+          <div>
+          <button class="btn btn-success" id="getFairyBtn" type="button" onclick="buyFairy()">Buy Fairy</button>
+
           <h5>Fairy Count: <span id="fairy-count">0</span></h5>
-          <button class="btn btn-success" id="getLeprMapBtn" onclick="buyLeprMap()">BUY Leprechaun Map</button>
+        </div>
+        <div>
+          <button class="btn btn-success" id="getLeprMapBtn" type="button"  onclick="buyLeprMap()">BUY Leprechaun Map</button>
           <h5>Leprecaun Map: <span id="leprechaun-count">0</span></h5>
-          <button class="btn btn-success" id="getUnicornBtn" onclick="buyUnicorn()">Buy Unicorn</button>
+        </div>
+        <div>
+          <button class="btn btn-success" id="getUnicornBtn" type="button"  onclick="buyUnicorn()">Buy Unicorn</button>
           <h5>Unicorn: <span id="unicorn-count">0</span></h5>
-          <button class="btn btn-success" id="hireDwarfTeamBtn" onclick="hireDwarfTeam()">BUY Dwarf Team</button>
+        </div>
+        <div>
+          <button class="btn btn-success" id="hireDwarfTeamBtn" type="button"  onclick="hireDwarfTeam()">BUY Dwarf Team</button>
           <h5>Dwarf Team: <span id="dwarf-count">0</span></h5>
+        </div>
         </h4>
       </div>
     </div>
