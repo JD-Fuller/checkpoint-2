@@ -98,7 +98,7 @@ setInterval(function update() {
 
 function buttonFairyToggle() {
   if (clickUpgrades.fairyGuide.price > crystalCount) {
-    getFairyBtn.disabled = true;
+    document.querySelector('#getFairyBtn').disabled = true;
   }
 }
 
