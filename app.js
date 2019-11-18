@@ -172,8 +172,6 @@ function countReset() {
   }
   fairyCountElem.innerHTML = fairyCount;
   fairyPriceElem.innerHTML = fairyPrice;
-  debugger;
-  console.log(fairyPriceElem)
   fairyMult();
   update();
 }

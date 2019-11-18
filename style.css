@@ -28,6 +28,17 @@ h1 {
   font-family: "Press Start 2P";
   text-align: center;
 }
+.dataRight {
+  font-family: "Press Start 2p";
+  border: 3px solid rgba(158, 161, 163, 0.61);
+  margin: 2em;
+  padding: 10pt;
+  text-align: center;
+  box-shadow: -10px 10px rgb(255, 93, 96);
+  height: 100%;
+  align-items: center;
+}
+
 
 .col .dataRight {
   flex-flow: column;
@@ -67,9 +78,20 @@ h5 {
   /* display: inline-flex; */
   align-items: center;
 }
-#fairy-price {
+/* #fairy-price {
   float: center;
+} */
+
+.displayPrice {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+ h2 {
+  inline-size: max-content;
+  word-spacing: -1em;
+}
+
 hr {
   margin: 0 .5rem 0 .5rem;
   height: 2px;
