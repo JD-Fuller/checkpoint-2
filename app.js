@@ -46,7 +46,7 @@ let dwarfPriceElem = document.getElementById("dwarf-price")
 /**
  * Reset all elements
  */
-function countReset() {
+function countUpdate() {
 crystalCountElem = document.getElementById("crystal-count");
 fairyCountElem = document.getElementById("fairy-count");
 leprMapElem = document.getElementById("leprechaun-count");
@@ -166,12 +166,15 @@ function countReset() {
  * Purchase - Upgrade & Multiplier Functions
  */
   function buyFairy() {
+    console.log(fairyPrice)
   if (crystalCount >= fairyPrice)
   {fairyCount++;
     crystalCount = crystalCount - fairyPrice;
   }
+  console.log(fairyPrice)
   fairyCountElem.innerHTML = fairyCount;
   fairyPriceElem.innerHTML = fairyPrice;
+  // countUpdate();
   fairyMult();
   update();
 }
