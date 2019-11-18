@@ -8,7 +8,9 @@ header {
   font-family: "Press Start 2P";
   color: white;
 }
-
+.gamebuttons {
+  height: 9vh;
+}
 /* .wizardImage {
   height: 100%;
 } */
@@ -64,10 +66,9 @@ h1 {
   font-family: "Press Start 2P";
   margin: 0 .5em 0 .5em;
 }
-.crystal-icon {
+/* .crystal-icon {
 
-  source: https://gamepedia.cursecdn.com/pixark_gamepedia_en/3/30/Yellow_Magic_Crystal_Packet.png
-}
+} */
 
 .btn:disabled, .btn[disabled] {
   color: red;
@@ -79,12 +80,11 @@ h5 {
 }
 
 .dataRight div {
-  /* display: inline-flex; */
   align-items: center;
 }
-/* #fairy-price {
-  float: center;
-} */
+.dataRight {
+  margin: 1em;
+}
 
 .displayPrice {
   justify-content: center;
@@ -112,14 +112,7 @@ p {
   font-variant: all-small-caps;
 }
 
-@media only screen and (max-width: 500px) {
-  .wizardImage {
-    
-    /* width: auto; */
-    height: 250px;
-  }
-  .crystalCol {
-    height: auto;
-    width: 10vw;
-  }
+@media only screen and (width: 700px) { 
+.main-row {
+  flex-wrap: wrap;
 }

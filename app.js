@@ -52,10 +52,10 @@ fairyCountElem = document.getElementById("fairy-count");
 leprMapElem = document.getElementById("leprechaun-count");
 unicornCountElem = document.getElementById("unicorn-count");
 dwarfCountElem = document.getElementById("dwarf-count");
-let fairyPriceElem = document.getElementById("fairy-price");
-let leprechaunPriceElem = document.getElementById("leprechaun-price");
-let unicornPriceElem = document.getElementById("unicorn-price")
-let dwarfPriceElem = document.getElementById("dwarf-price")
+// let fairyPriceElem = document.getElementById("fairy-price");
+// let leprechaunPriceElem = document.getElementById("leprechaun-price");
+// let unicornPriceElem = document.getElementById("unicorn-price")
+// let dwarfPriceElem = document.getElementById("dwarf-price")
 }
 /**
  * Get Buttons
@@ -71,13 +71,12 @@ let hireDwarfTeamBtn = document.getElementById('hireDwarfTeamBtn');
  * Set Price shortcuts
  */
 let fairyPrice = clickUpgrades.fairyGuide.price;
-
 let leprMapPrice = clickUpgrades.leprechaunMap.price;
-
 let unicornPrice = autoUpgrades.unicorn.price;
-
 let dwarfPrice = autoUpgrades.dwarfTeam.price;
-
+/**
+ * Variables of Initial Counts of Items
+ */
 let crystalCount = 0;
 let unicornCount = 0;
 let leprechaunCount = 0;
@@ -108,6 +107,21 @@ function update(){
   buttonUnicornToggle();
   buttonDwarfTmToggle();
 }
+
+/**
+ * Update Pricing on Game Reset
+ */
+function priceUpdate() {
+  fairyPrice = clickUpgrades.fairyGuide.price;
+  leprMapPrice = clickUpgrades.leprechaunMap.price;
+  unicornPrice = autoUpgrades.unicorn.price;
+  dwarfPrice = autoUpgrades.dwarfTeam.price;
+
+  fairyPriceElem.innerHTML = fairyPrice.toString()
+  leprechaunPriceElem.innerHTML = leprMapPrice.toString()
+  unicornPriceElem.innerHTML = unicornPrice.toString()
+  dwarfPriceElem.innerHTML = dwarfPrice.toString()
+}
 /**
  * Single Items Click Upgrades
  */
@@ -131,6 +145,7 @@ function startGame(){
   hireDwarfTeamBtn.setAttribute('disabled','true')
   update()
   countReset()
+  priceUpdate()
 };
 function endGame(){
   crystalCount = 0
@@ -146,56 +161,52 @@ function endGame(){
   startButton.removeAttribute('disabled')
   countReset()
   update()
+  priceUpdate()
 }
 
 /**
  * Reset All numbers
  */
 function countReset() {
-  crystalCountElem.innerHTML = crystalCount
-  fairyCountElem.innerHTML = fairyCount
-  fairyPriceElem.innerHTML = fairyPrice
-  leprMapElem.innerHTML = leprechaunCount
-  leprechaunPriceElem.innerHTML = leprMapPrice
-  unicornCountElem.innerHTML = unicornCount
-  unicornPriceElem.innerHTML = unicornPrice
-  dwarfCountElem.innerHTML = dwarfCount
-  dwarfPriceElem.innerHTML = dwarfPrice
+  crystalCountElem.innerHTML = crystalCount.toString()
+  fairyCountElem.innerHTML = fairyCount.toString()
+  leprMapElem.innerHTML = leprechaunCount.toString()
+  unicornCountElem.innerHTML = unicornCount.toString()
+  dwarfCountElem.innerHTML = dwarfCount.toString()
   }
 /**
  * Purchase - Upgrade & Multiplier Functions
  */
+function fairyMult() {
+var multiplier = fairyMultiplier;
+ fairyPrice = fairyPrice + multiplier;
+}
   function buyFairy() {
-    console.log(fairyPrice)
   if (crystalCount >= fairyPrice)
   {fairyCount++;
     crystalCount = crystalCount - fairyPrice;
   }
-  console.log(fairyPrice)
-  fairyCountElem.innerHTML = fairyCount;
-  fairyPriceElem.innerHTML = fairyPrice;
-  // countUpdate();
   fairyMult();
   update();
+ 
+  fairyCountElem.innerHTML = fairyCount.toString();
+  fairyPriceElem.innerHTML = fairyPrice.toString();
+  
 }
   function fairyUpgrade(){
   if(fairyCount > 0) {
     crystalCount = crystalCount + (fairyCount * 2);
   }
 }
-  function fairyMult() {
-  var multiplier = fairyMultiplier;
-   fairyPrice = fairyPrice + multiplier;
-  }
   function buyLeprMap() {
     if (crystalCount >= leprMapPrice){
       leprechaunCount++;
       crystalCount = crystalCount - leprMapPrice;
     }
-    leprMapElem.innerHTML = leprechaunCount;
-    leprechaunPriceElem.innerHTML = leprMapPrice;
     leprechaunMult()
     update();
+    leprMapElem.innerHTML = leprechaunCount.toString();
+    leprechaunPriceElem.innerHTML = leprMapPrice.toString();
   
   }
   function leprechaunUpgrade(){
@@ -212,14 +223,14 @@ function countReset() {
       unicornCount++;
       crystalCount = crystalCount - unicornPrice;
     }
-    unicornCountElem.innerHTML = unicornCount;
-    unicornPriceElem.innerHTML = unicornPrice;
     unicornMult();
     update();
+    unicornCountElem.innerHTML = unicornCount.toString();
+    unicornPriceElem.innerHTML = unicornPrice.toString();
   }
   setInterval(function unicornUpgrade(){
     if (unicornCount > 0) 
-    {crystalCount = crystalCount + 5}}, 10000);
+    {crystalCount = crystalCount + (5*unicornCount)}}, 3000);
   function unicornMult(){
     var multiplier = unicornMultiplier;
     unicornPrice = unicornPrice + multiplier;
@@ -229,14 +240,14 @@ function countReset() {
       dwarfCount++;
       crystalCount = crystalCount - dwarfPrice;
     }
-    dwarfCountElem.innerHTML = dwarfCount;
-    dwarfPriceElem.innerHTML = dwarfPrice;
     dwarfMult();
     update();
+    dwarfCountElem.innerHTML = dwarfCount.toString();
+    dwarfPriceElem.innerHTML = dwarfPrice.toString();
   }
   setInterval(function dwarfUpgrade(){
     if (dwarfCount > 0) {
-      crystalCount = crystalCount + 10}}, 30000);
+      crystalCount = crystalCount + (10* dwarfCount)}}, 30000);
   function dwarfMult(){
     var multiplier = dwarfMultiplier;
     dwarfPrice = dwarfPrice + multiplier;
