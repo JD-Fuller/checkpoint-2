@@ -8,6 +8,10 @@ header {
   font-family: "Press Start 2P";
   color: white;
 }
+
+/* .wizardImage {
+  height: 100%;
+} */
 .h1 {
   font-size: 50pt;
 }
@@ -106,4 +110,15 @@ hr .main {
 p {
   color: red;
   font-variant: all-small-caps;
+}
+
+@media only screen and (max-width: 400px) {
+  .wizardImage {
+    height: auto;
+    width: 100px;
+  }
+  .crystalCol {
+    height: auto;
+    width: 10vw;
+  }
 }
