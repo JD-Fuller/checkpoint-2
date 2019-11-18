@@ -50,3 +50,8 @@ h1 {
 
   source: https://gamepedia.cursecdn.com/pixark_gamepedia_en/3/30/Yellow_Magic_Crystal_Packet.png
 }
+
+.btn:disabled, .btn[disabled] {
+  color: red;
+  background-color: white;
+}
