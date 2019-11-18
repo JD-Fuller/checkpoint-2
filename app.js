@@ -190,6 +190,7 @@ function countReset() {
       crystalCount = crystalCount - leprMapPrice;
     }
     leprMapElem.innerHTML = leprechaunCount;
+    leprechaunPriceElem.innerHTML = leprMapPrice;
     leprechaunMult()
     update();
   
@@ -209,6 +210,7 @@ function countReset() {
       crystalCount = crystalCount - unicornPrice;
     }
     unicornCountElem.innerHTML = unicornCount;
+    unicornPriceElem.innerHTML = unicornPrice;
     unicornMult();
     update();
   }
@@ -225,6 +227,7 @@ function countReset() {
       crystalCount = crystalCount - dwarfPrice;
     }
     dwarfCountElem.innerHTML = dwarfCount;
+    dwarfPriceElem.innerHTML = dwarfPrice;
     dwarfMult();
     update();
   }
