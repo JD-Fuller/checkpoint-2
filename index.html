@@ -25,7 +25,6 @@
   <main class="container-fluid">
     <div class="row">
       <div class="col">
-          
         <img src="http://pixelartmaker.com/art/b5da8523654c61c.png" alt="wizard image"></img>
       </div>
       <div class="col">
@@ -36,27 +35,46 @@
           <button class="btn btn-success" id="end-button" type="button" style="margin: 3em;" onclick="endGame()">End Quest</button>
       </div>
       <div class="col dataRight">
+        <div class="row data">
+          <div class="col crystal">
         <h3>Crystal Hunt</h3>
-        <h4>Selections</h4>
           <h5>Crystal Count: <span id="crystal-count">0</span></h5>
-          <div>
-          <button class="btn btn-success" id="getFairyBtn" type="button" onclick="buyFairy()">Buy Fairy</button>
-
+          <hr class="main">
+        </div>
+        </div>
+          <div class="row fairy">
+          <div class="col-2">
+           <h2>$ <span id="fairy-price" class="displayPrice"></span></h2>
+          </div>
+          <div class="col-10">
+            <button class="btn btn-success" id="getFairyBtn" type="button" onclick="buyFairy()"></element>Fairy Guide</button>
+            <p>+2 Crystals per mine</p>
           <h5>Fairy Count: <span id="fairy-count">0</span></h5>
         </div>
-        <div>
-          <button class="btn btn-success" id="getLeprMapBtn" type="button"  onclick="buyLeprMap()">BUY Leprechaun Map</button>
+        </div>
+        <hr>
+        <div class="row leprechaun">
+          <div class="col-2">
+              <h2>$ <span id="leprechaun-price" class="displayPrice"></span></h2>
+            </div>
+            <div class="col-10"><button class="btn btn-success" id="getLeprMapBtn" type="button"  onclick="buyLeprMap()">Leprechaun Map</button><p>+3 Crystals per mine</p>
           <h5>Leprecaun Map: <span id="leprechaun-count">0</span></h5>
         </div>
-        <div>
-          <button class="btn btn-success" id="getUnicornBtn" type="button"  onclick="buyUnicorn()">Buy Unicorn</button>
-          <h5>Unicorn: <span id="unicorn-count">0</span></h5>
         </div>
+        </div>
+        <hr>
         <div>
-          <button class="btn btn-success" id="hireDwarfTeamBtn" type="button"  onclick="hireDwarfTeam()">BUY Dwarf Team</button>
+          <button class="btn btn-success" id="getUnicornBtn" type="button"  onclick="buyUnicorn()">Unicorns</button>
+          <p>+5 Crystals every 10 sec</p>
+          <h5>Unicorns: <span id="unicorn-count">0</span></h5>
+        </div>
+        <hr>
+        <div>
+          <button class="btn btn-success" id="hireDwarfTeamBtn" type="button"  onclick="hireDwarfTeam()">Hire Dwarf Team</button><p>+10 Crystals every 30 sec</p>
           <h5>Dwarf Team: <span id="dwarf-count">0</span></h5>
         </div>
       </div>
+    </div>
     </div>
 
   </main>

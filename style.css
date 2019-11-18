@@ -29,13 +29,16 @@ h1 {
   text-align: center;
 }
 
-.dataRight {
+.col .dataRight {
+  flex-flow: column;
+  font-family: "Press Start 2p";
   border: 3px solid rgba(158, 161, 163, 0.61);
   margin: 2em;
-  padding: 1em 0 4em 0;
+  padding: 10pt;
   text-align: center;
   box-shadow: -10px 10px rgb(255, 93, 96);
   height: 100%;
+  align-items: center;
 }
 
 .btn {
@@ -44,7 +47,7 @@ h1 {
   color: white;
   cursor: pointer;
   font-family: "Press Start 2P";
-  margin-top: 1em;
+  margin: 0 .5em 0 .5em;
 }
 .crystal-icon {
 
@@ -54,4 +57,31 @@ h1 {
 .btn:disabled, .btn[disabled] {
   color: red;
   background-color: white;
+}
+
+h5 {
+  margin-top: .5em;
+}
+
+.dataRight div {
+  /* display: inline-flex; */
+  align-items: center;
+}
+#fairy-price {
+  float: center;
+}
+hr {
+  margin: 0 .5rem 0 .5rem;
+  height: 2px;
+  color: rgb(66, 66, 73);
+}
+hr .main {
+  /* margin: 0 .5rem 0 .5rem; */
+  height: 5px;
+  color: rgb(66, 66, 73);
+}
+
+p {
+  color: red;
+  font-variant: all-small-caps;
 }
