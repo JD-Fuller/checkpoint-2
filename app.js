@@ -271,7 +271,7 @@ function buttonUnicornToggle() {
   } else {
     getUnicornBtn.setAttribute('disabled','true')
   }
-    }
+  }
 function buttonDwarfTmToggle() {
   if (crystalCount > dwarfPrice) {
     hireDwarfTeamBtn.removeAttribute('disabled');

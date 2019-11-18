@@ -112,10 +112,11 @@ p {
   font-variant: all-small-caps;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .wizardImage {
-    height: auto;
-    width: 100px;
+    
+    /* width: auto; */
+    height: 250px;
   }
   .crystalCol {
     height: auto;
