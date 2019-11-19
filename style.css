@@ -8,6 +8,10 @@ header {
   font-family: "Press Start 2P";
   color: white;
 }
+
+.main-row {
+  justify-content: space-between;
+}
 .gamebuttons {
   height: 9vh;
 }
