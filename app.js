@@ -77,6 +77,7 @@ let dwarfPrice = autoUpgrades.dwarfTeam.price;
 /**
  * Variables of Initial Counts of Items
  */
+// String crystalCount = 0;
 let crystalCount = 0;
 let unicornCount = 0;
 let leprechaunCount = 0;
